@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Melek Khlass · Portfolio</title>
+  <meta name="description" content="Melek Khlass, élève ingénieure en informatique à ESPRIT. Projets en IA générative, cloud, DevOps et IoT. Recherche un stage PFE à Tunis dès janvier 2027.">
+  <meta name="author" content="Melek Khlass">
+  <!-- Remplacer l'URL ci-dessous si le nom du projet Vercel est différent -->
+  <link rel="canonical" href="https://melek-khlass.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://melek-khlass.vercel.app/">
+  <meta property="og:title" content="Melek Khlass · Élève ingénieure IA, Cloud, DevOps, IoT">
+  <meta property="og:description" content="Projets en IA générative (RAG, agents), serverless, IoT et web. Recherche un stage PFE à Tunis dès janvier 2027.">
+  <meta property="og:image" content="https://melek-khlass.vercel.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0f5c6e">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Choix de la langue avant l'affichage : ?lang=en, sinon dernier choix, sinon français
+    (function () {
+      var l = new URLSearchParams(location.search).get('lang');
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (l === 'en' || l === 'fr') { document.documentElement.dataset.lang = l; document.documentElement.lang = l; }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#projets"><span lang="fr">Aller aux projets</span><span lang="en">Skip to projects</span></a>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top" aria-label="Melek Khlass">MK</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#projets"><span lang="fr">Projets</span><span lang="en">Projects</span></a>
+        <a href="#parcours"><span lang="fr">Parcours</span><span lang="en">Experience</span></a>
+        <a href="#competences"><span lang="fr">Compétences</span><span lang="en">Skills</span></a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="lang-btn" type="button" id="langBtn" aria-label="Switch language / Changer de langue">
+        <span lang="fr">EN</span><span lang="en">FR</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap">
+      <p class="eyebrow">
+        <span class="dot" aria-hidden="true"></span>
+        <span lang="fr">Disponible pour un stage PFE · janvier 2027 · Tunis ou à distance</span>
+        <span lang="en">Available for an end-of-studies internship · January 2027 · Tunis or remote</span>
+      </p>
+      <h1>Melek Khlass</h1>
+      <p class="lead">
+        <span lang="fr">Élève ingénieure en informatique à ESPRIT. Je construis des agents IA, des fonctions serverless et des systèmes IoT, et je cherche un PFE en <strong>IA</strong>, <strong>Cloud</strong>, <strong>DevOps</strong> ou <strong>IoT</strong>.</span>
+        <span lang="en">Computer engineering student at ESPRIT. I build AI agents, serverless functions and IoT systems, and I am looking for an end-of-studies internship in <strong>AI</strong>, <strong>Cloud</strong>, <strong>DevOps</strong> or <strong>IoT</strong>.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:khlassmelek0@gmail.com?subject=Stage%20PFE%202027"><span lang="fr">Me contacter</span><span lang="en">Contact me</span></a>
+        <a class="btn" href="https://www.linkedin.com/in/melek-khlass-97412625b" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Khlass-Melek" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <ul class="facts">
+        <li><b>ESPRIT</b><span lang="fr">Ingénieur informatique, option systèmes embarqués (2024–2027)</span><span lang="en">Computer engineering, embedded systems track (2024–2027)</span></li>
+        <li><b>AWS · NVIDIA</b><span lang="fr">Cloud Foundations, Deep Learning, détection d'anomalies</span><span lang="en">Cloud Foundations, Deep Learning, Anomaly Detection</span></li>
+        <li><b>FR · EN · AR</b><span lang="fr">Français et anglais courants</span><span lang="en">Fluent French and English</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ PROJETS ============ -->
+    <section id="projets" class="section wrap">
+      <h2><span lang="fr">Projets</span><span lang="en">Projects</span></h2>
+
+      <!-- Projet 1 : Agentic RAG -->
+      <article class="project" id="rag">
+        <div class="media" data-demo="assets/demos/rag.mp4" data-poster="assets/demos/rag.jpg">
+          <svg viewBox="0 0 560 300" role="img" aria-labelledby="rag-t">
+            <title id="rag-t">Architecture : question, agent LangGraph, outils RAG et calculatrice, LLM local Ollama</title>
+            <g class="d-box"><rect x="20" y="125" width="110" height="50" rx="10"/><text x="75" y="155">Question</text></g>
+            <g class="d-box accent"><rect x="180" y="115" width="150" height="70" rx="12"/><text x="255" y="146">Agent</text><text x="255" y="166" class="small">LangGraph</text></g>
+            <g class="d-box"><rect x="390" y="30" width="150" height="56" rx="10"/><text x="465" y="54">RAG</text><text x="465" y="72" class="small">vector store · sources</text></g>
+            <g class="d-box"><rect x="390" y="122" width="150" height="56" rx="10"/><text x="465" y="155">Calculator</text></g>
+            <g class="d-box"><rect x="390" y="214" width="150" height="56" rx="10"/><text x="465" y="238">LLM local</text><text x="465" y="256" class="small">Ollama</text></g>
+            <g class="d-line"><path d="M130 150 H180"/><path d="M330 135 L390 58"/><path d="M330 150 H390"/><path d="M330 165 L390 242"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <p class="meta"><span lang="fr">Projet de certification IA · oct. 2026</span><span lang="en">AI certification project · Oct 2026</span></p>
+          <h3>Agentic RAG Assistant</h3>
+          <p>
+            <span lang="fr">Un agent IA qui répond à des questions sur la production d'énergie à partir d'un corpus de documents, en citant ses sources. Le LLM tourne en local.</span>
+            <span lang="en">An AI agent that answers questions about energy production from a document corpus and cites its sources. The LLM runs locally.</span>
+          </p>
+          <ul>
+            <li><span lang="fr">Pipeline RAG : parsing, nettoyage, chunking et indexation des documents avec suivi des sources.</span><span lang="en">RAG pipeline: document parsing, cleaning, chunking and indexing with source tracking.</span></li>
+            <li><span lang="fr">Agent LangGraph qui choisit entre deux outils : recherche filtrée par source et calculatrice.</span><span lang="en">LangGraph agent choosing between two tools: source-filtered search and a calculator.</span></li>
+            <li><span lang="fr">Évaluation de l'agent sur un jeu de questions de référence.</span><span lang="en">Agent evaluated on a reference question set.</span></li>
+          </ul>
+          <p class="tags"><span>Python</span><span>LangChain</span><span>LangGraph</span><span>Ollama</span><span>RAG</span></p>
+          <p class="links">
+            <!-- Mettre le lien du dépôt GitHub quand il est public (tant que le lien vaut "#", le bouton reste caché) -->
+            <a class="btn small" href="#" target="_blank" rel="noopener"><span lang="fr">Code sur GitHub</span><span lang="en">Code on GitHub</span></a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Projet 2 : Quoi de neuf Docteur -->
+      <article class="project" id="qdnd">
+        <div class="media" data-demo="assets/demos/chatbot.mp4" data-poster="assets/demos/chatbot.jpg">
+          <svg viewBox="0 0 560 300" role="img" aria-labelledby="qd-t">
+            <title id="qd-t">Architecture : application Flutter, fonction serverless proxy, LLM, base PostgreSQL avec Row Level Security</title>
+            <g class="d-box"><rect x="20" y="120" width="120" height="60" rx="10"/><text x="80" y="146">App</text><text x="80" y="164" class="small">Flutter</text></g>
+            <g class="d-box accent"><rect x="200" y="110" width="160" height="80" rx="12"/><text x="280" y="140">Edge Function</text><text x="280" y="160" class="small">proxy · TypeScript</text><text x="280" y="176" class="small">API key server-side</text></g>
+            <g class="d-box"><rect x="420" y="40" width="120" height="60" rx="10"/><text x="480" y="75">LLM</text></g>
+            <g class="d-box"><rect x="420" y="200" width="120" height="60" rx="10"/><text x="480" y="226">PostgreSQL</text><text x="480" y="244" class="small">Row Level Security</text></g>
+            <g class="d-line"><path d="M140 150 H200"/><path d="M360 135 L420 70"/><path d="M360 165 L420 230"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <p class="meta"><span lang="fr">Stage d'été · 2026</span><span lang="en">Summer internship · 2026</span></p>
+          <h3>Quoi de neuf Docteur</h3>
+          <p>
+            <span lang="fr">Plateforme de télémédecine, réalisée en stage auprès d'un professeur en chirurgie orthopédique. J'y ai intégré un chatbot IA médical et sécurisé l'accès aux données de santé.</span>
+            <span lang="en">A telemedicine platform, built during an internship with a professor of orthopedic surgery. I integrated a medical AI chatbot and secured access to health data.</span>
+          </p>
+          <ul>
+            <li><span lang="fr">Chatbot IA via une fonction serverless qui sert de proxy sécurisé vers le LLM : aucune clé d'API côté client.</span><span lang="en">AI chatbot behind a serverless function acting as a secure proxy to the LLM: no API key on the client.</span></li>
+            <li><span lang="fr">Authentification et contrôle d'accès par rôles avec des politiques Row Level Security.</span><span lang="en">Authentication and role-based access control with Row Level Security policies.</span></li>
+            <li><span lang="fr">Fonctions serverless en TypeScript (webhook de paiement, notifications push) et modèle de données PostgreSQL.</span><span lang="en">TypeScript serverless functions (payment webhook, push notifications) and PostgreSQL data model.</span></li>
+          </ul>
+          <p class="tags"><span>TypeScript (Deno)</span><span>Supabase</span><span>Edge Functions</span><span>PostgreSQL</span><span>Flutter</span></p>
+          <p class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener"><span lang="fr">Voir le projet</span><span lang="en">See the project</span></a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Projet 3 : THE ROOM -->
+      <article class="project" id="theroom">
+        <div class="media" data-demo="assets/demos/theroom.mp4" data-poster="assets/demos/theroom.jpg">
+          <svg viewBox="0 0 560 300" role="img" aria-labelledby="tr-t">
+            <title id="tr-t">Architecture : capteurs ESP32 et Raspberry Pi reliés par un broker MQTT, backend Supabase, interface Flutter Web</title>
+            <g class="d-box"><rect x="20" y="40" width="120" height="54" rx="10"/><text x="80" y="72">ESP32</text></g>
+            <g class="d-box"><rect x="20" y="123" width="120" height="54" rx="10"/><text x="80" y="155">ESP32</text></g>
+            <g class="d-box"><rect x="20" y="206" width="120" height="54" rx="10"/><text x="80" y="238">Raspberry Pi 4</text></g>
+            <g class="d-box accent"><rect x="210" y="110" width="140" height="80" rx="12"/><text x="280" y="146">MQTT</text><text x="280" y="166" class="small">publish / subscribe</text></g>
+            <g class="d-box"><rect x="420" y="60" width="120" height="60" rx="10"/><text x="480" y="95">Supabase</text></g>
+            <g class="d-box"><rect x="420" y="180" width="120" height="60" rx="10"/><text x="480" y="206">Dashboard</text><text x="480" y="224" class="small">Flutter Web</text></g>
+            <g class="d-line"><path d="M140 67 L210 130"/><path d="M140 150 H210"/><path d="M140 233 L210 170"/><path d="M350 135 L420 90"/><path d="M350 165 L420 210"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <p class="meta"><span lang="fr">Projet d'équipe (5 personnes) · 2026</span><span lang="en">Team project (5 people) · 2026</span></p>
+          <h3>THE ROOM</h3>
+          <p>
+            <span lang="fr">Un système IoT distribué pour une escape room : les énigmes physiques communiquent entre elles et avec un tableau de bord en temps réel.</span>
+            <span lang="en">A distributed IoT system for an escape room: physical puzzles talk to each other and to a real-time dashboard.</span>
+          </p>
+          <ul>
+            <li><span lang="fr">Dispositifs ESP32 et Raspberry Pi qui échangent en publish/subscribe via MQTT.</span><span lang="en">ESP32 and Raspberry Pi devices exchanging messages over MQTT publish/subscribe.</span></li>
+            <li><span lang="fr">Conception du backend et du modèle de données sur Supabase.</span><span lang="en">Designed the backend and the data model on Supabase.</span></li>
+            <li><span lang="fr">Suivi du projet avec Jira, tests avec Xray, qualité du code avec SonarQube.</span><span lang="en">Project tracked in Jira, tests in Xray, code quality with SonarQube.</span></li>
+          </ul>
+          <p class="tags"><span>ESP32</span><span>Raspberry Pi</span><span>MQTT</span><span>Supabase</span><span>Flutter Web</span></p>
+          <p class="links">
+            <a class="btn small" href="https://github.com/Khlass-Melek/Escape-Room" target="_blank" rel="noopener"><span lang="fr">Code sur GitHub</span><span lang="en">Code on GitHub</span></a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Projet 4 : STUDAR -->
+      <article class="project" id="studar">
+        <div class="media" data-demo="assets/demos/studar.mp4" data-poster="assets/demos/studar.jpg">
+          <svg viewBox="0 0 560 300" role="img" aria-labelledby="st-t">
+            <title id="st-t">Module transport : réservation, calcul d'itinéraire OpenRouteService, prix selon la distance, suivi en temps réel avec Mercure</title>
+            <g class="d-box"><rect x="20" y="120" width="120" height="60" rx="10"/><text x="80" y="146">Booking</text><text x="80" y="164" class="small">JavaFX · Web</text></g>
+            <g class="d-box accent"><rect x="200" y="110" width="150" height="80" rx="12"/><text x="275" y="144">Symfony 6.4</text><text x="275" y="164" class="small">Doctrine · MySQL</text></g>
+            <g class="d-box"><rect x="410" y="30" width="130" height="60" rx="10"/><text x="475" y="56">Routing</text><text x="475" y="74" class="small">OpenRouteService</text></g>
+            <g class="d-box"><rect x="410" y="120" width="130" height="60" rx="10"/><text x="475" y="146">Pricing</text><text x="475" y="164" class="small">distance-based</text></g>
+            <g class="d-box"><rect x="410" y="210" width="130" height="60" rx="10"/><text x="475" y="236">Live tracking</text><text x="475" y="254" class="small">Mercure</text></g>
+            <g class="d-line"><path d="M140 150 H200"/><path d="M350 130 L410 60"/><path d="M350 150 H410"/><path d="M350 170 L410 240"/></g>
+          </svg>
+        </div>
+        <div class="body">
+          <p class="meta"><span lang="fr">Projet d'équipe ESPRIT · 2025</span><span lang="en">ESPRIT team project · 2025</span></p>
+          <h3>STUDAR</h3>
+          <p>
+            <span lang="fr">Plateforme de logement et de transport pour étudiants. J'ai développé le module Transport, du web à l'application desktop.</span>
+            <span lang="en">A housing and transport platform for students. I built the Transport module, on both the web and desktop apps.</span>
+          </p>
+          <ul>
+            <li><span lang="fr">Gestion des véhicules et des réservations (CRUD) avec un prix calculé selon la distance.</span><span lang="en">Vehicle and booking management (CRUD) with distance-based pricing.</span></li>
+            <li><span lang="fr">Calcul d'itinéraires avec l'API OpenRouteService.</span><span lang="en">Route calculation with the OpenRouteService API.</span></li>
+            <li><span lang="fr">Suivi des trajets en temps réel avec Mercure.</span><span lang="en">Real-time trip tracking with Mercure.</span></li>
+          </ul>
+          <p class="tags"><span>PHP</span><span>Symfony 6.4</span><span>Doctrine</span><span>MySQL</span><span>Java</span><span>JavaFX</span></p>
+          <p class="links">
+            <a class="btn small" href="#" target="_blank" rel="noopener"><span lang="fr">Code sur GitHub</span><span lang="en">Code on GitHub</span></a>
+          </p>
+        </div>
+      </article>
+
+      <p class="note">
+        <span lang="fr">Ce site est lui-même conteneurisé avec Docker et vérifié par une pipeline CI GitHub Actions avant chaque déploiement sur Vercel.</span>
+        <span lang="en">This site is itself containerized with Docker and checked by a GitHub Actions CI pipeline before each deployment to Vercel.</span>
+      </p>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section id="parcours" class="section wrap">
+      <h2><span lang="fr">Parcours</span><span lang="en">Experience &amp; education</span></h2>
+      <ol class="timeline">
+        <li>
+          <span class="when"><span lang="fr">Été 2026</span><span lang="en">Summer 2026</span></span>
+          <div>
+            <h3><span lang="fr">Stagiaire développeuse Full-Stack &amp; IA</span><span lang="en">Full-stack &amp; AI developer intern</span></h3>
+            <p>Quoi de neuf Docteur · <span lang="fr">plateforme de télémédecine</span><span lang="en">telemedicine platform</span></p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2024 – 2027</span>
+          <div>
+            <h3><span lang="fr">Diplôme d'ingénieur en informatique, systèmes embarqués (SLEAM)</span><span lang="en">Engineering degree in computer science, embedded systems (SLEAM)</span></h3>
+            <p>ESPRIT, Tunis</p>
+          </div>
+        </li>
+        <li>
+          <span class="when"><span lang="fr">Fév. – juin 2024</span><span lang="en">Feb – Jun 2024</span></span>
+          <div>
+            <h3><span lang="fr">Projet de fin d'études : navigation d'un fauteuil roulant autonome</span><span lang="en">Bachelor's final project: autonomous wheelchair navigation</span></h3>
+            <p><span lang="fr">ISTMT · ROS2 sur Raspberry Pi 4, simulation Gazebo et RViz, cartographie ORB-SLAM et RTAB-Map</span><span lang="en">ISTMT · ROS2 on Raspberry Pi 4, Gazebo and RViz simulation, ORB-SLAM and RTAB-Map mapping</span></p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2023</span>
+          <div>
+            <h3><span lang="fr">Stages de développement web</span><span lang="en">Web development internships</span></h3>
+            <p><span lang="fr">Bi-dev (équipe agile, PHP, MySQL, JavaScript) et Hôpital Militaire Principal d'Instruction de Tunis (application d'archives médicales)</span><span lang="en">Bi-dev (agile team, PHP, MySQL, JavaScript) and the Military Hospital of Tunis (medical records application)</span></p>
+          </div>
+        </li>
+        <li>
+          <span class="when">2021 – 2024</span>
+          <div>
+            <h3><span lang="fr">Licence en génie biomédical</span><span lang="en">Bachelor's degree in biomedical engineering</span></h3>
+            <p><span lang="fr">Institut Supérieur des Technologies Médicales de Tunis (ISTMT)</span><span lang="en">Higher Institute of Medical Technologies of Tunis (ISTMT)</span></p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ COMPETENCES ============ -->
+    <section id="competences" class="section wrap">
+      <h2><span lang="fr">Compétences</span><span lang="en">Skills</span></h2>
+      <div class="skills">
+        <div class="skill">
+          <h3><span lang="fr">IA générative &amp; agents</span><span lang="en">Generative AI &amp; agents</span></h3>
+          <p>LLM, RAG, LangChain, LangGraph, Ollama, Qdrant, n8n, prompt engineering</p>
+        </div>
+        <div class="skill">
+          <h3><span lang="fr">IA &amp; données</span><span lang="en">AI &amp; data</span></h3>
+          <p><span lang="fr">Machine learning, deep learning, PyTorch, vision par ordinateur, détection d'anomalies</span><span lang="en">Machine learning, deep learning, PyTorch, computer vision, anomaly detection</span></p>
+        </div>
+        <div class="skill">
+          <h3>Cloud AWS</h3>
+          <p>EC2, Lambda, S3, RDS, DynamoDB, VPC, IAM, ELB, Auto Scaling, CloudWatch</p>
+        </div>
+        <div class="skill">
+          <h3>DevOps</h3>
+          <p>Docker, Docker Compose, Kubernetes, Jenkins (CI/CD), Git, Linux, Prometheus, Grafana, SonarQube</p>
+        </div>
+        <div class="skill">
+          <h3><span lang="fr">IoT &amp; embarqué</span><span lang="en">IoT &amp; embedded</span></h3>
+          <p>MQTT, ESP32, Raspberry Pi, STM32, FreeRTOS, ROS2</p>
+        </div>
+        <div class="skill">
+          <h3><span lang="fr">Développement</span><span lang="en">Development</span></h3>
+          <p>Python, TypeScript, Java (Spring Boot), PHP (Symfony), C/C++, Dart (Flutter), PostgreSQL, MySQL, Supabase</p>
+        </div>
+      </div>
+
+      <h2 class="h2-sub"><span lang="fr">Certifications</span><span lang="en">Certifications</span></h2>
+      <ul class="certs">
+        <li><a href="https://www.credly.com/go/pyhJ87ye" target="_blank" rel="noopener"><b>AWS Academy Cloud Foundations</b><span><span lang="fr">Badge Credly · nov. 2026</span><span lang="en">Credly badge · Nov 2026</span></span></a></li>
+        <li><a href="https://learn.nvidia.com/certificates?id=f6_8PAkrQtSN6_DOHsisYg" target="_blank" rel="noopener"><b>NVIDIA DLI · Applications of AI for Anomaly Detection</b><span><span lang="fr">oct. 2026</span><span lang="en">Oct 2026</span></span></a></li>
+        <li><a href="https://learn.nvidia.com/certificates?id=gdAowNFfQROo9GV8iR0_1Q" target="_blank" rel="noopener"><b>NVIDIA DLI · Fundamentals of Deep Learning</b><span><span lang="fr">oct. 2026</span><span lang="en">Oct 2026</span></span></a></li>
+        <li><a href="https://learn.nvidia.com/certificates?id=Dt8xyzVcQ2mtab_p3fKmbQ" target="_blank" rel="noopener"><b>NVIDIA DLI · Generative AI with Diffusion Models</b><span><span lang="fr">oct. 2026</span><span lang="en">Oct 2026</span></span></a></li>
+        <li><div><b><span lang="fr">Opus Lab · Formation IA</span><span lang="en">Opus Lab · AI training</span></b><span><span lang="fr">LLM, RAG, agents IA, Qdrant, Ollama, n8n · oct. 2026</span><span lang="en">LLMs, RAG, AI agents, Qdrant, Ollama, n8n · Oct 2026</span></span></div></li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section wrap contact">
+      <h2><span lang="fr">Travaillons ensemble</span><span lang="en">Let's work together</span></h2>
+      <p>
+        <span lang="fr">Je cherche un stage de fin d'études à partir de janvier 2027, à Tunis ou à distance. Un sujet en IA, Cloud, DevOps ou IoT ? Écrivez-moi.</span>
+        <span lang="en">I am looking for an end-of-studies internship from January 2027, in Tunis or remote. Have a project in AI, Cloud, DevOps or IoT? Get in touch.</span>
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:khlassmelek0@gmail.com?subject=Stage%20PFE%202027">khlassmelek0@gmail.com</a>
+        <a class="btn" href="https://www.linkedin.com/in/melek-khlass-97412625b" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/Khlass-Melek" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© 2026 Melek Khlass · <span lang="fr">Arabe, français, anglais · notions de turc et d'espagnol</span><span lang="en">Arabic, French, English · basic Turkish and Spanish</span></p>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
