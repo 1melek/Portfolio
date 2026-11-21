@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vérifier le HTML
+        run: |
+          echo '{"extends":["html-validate:recommended"],"rules":{"no-inline-style":"off","doctype-style":"off","attribute-boolean-style":"off","no-trailing-whitespace":"off","void-style":"off","long-title":"off","no-raw-characters":"off"}}' > .htmlvalidate.json
+          npx --yes html-validate@8 index.html
+
+      - name: Construire l'image Docker
+        run: docker build -t portfolio .
+
+      - name: Tester le conteneur
+        run: |
+          docker run -d -p 8080:80 --name portfolio portfolio
+          sleep 2
+          curl -fsS http://localhost:8080/ | grep -q "Melek Khlass"
+          curl -fsS -o /dev/null http://localhost:8080/styles.css
+          curl -fsS -o /dev/null http://localhost:8080/assets/og.png
+          echo "Le site répond correctement."
